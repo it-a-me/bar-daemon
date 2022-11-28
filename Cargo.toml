@@ -1,0 +1,20 @@
+[package]
+name = "bar-daemon"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "bar-daemon"
+path = "src/daemon.rs"
+
+[[bin]]
+name = "bar-test-client"
+path = "src/client.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-trait = "0.1.58"
+json = "0.12.4"
+regex = "1.7.0"
+tokio = { version = "1.22.0", features = ["full"] }
